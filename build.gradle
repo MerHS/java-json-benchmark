@@ -17,13 +17,14 @@ repositories {
 }
 
 ext {
-    jacksonVersion = '2.10.2'
+    jacksonVersion = '2.13.0'
     dslJsonVersion = '1.9.5'
     johnzonVersion = '1.2.3'
     jmhVersion = '1.23'
 }
 
 dependencies {
+    implementation files('libs/jackson-eisel.jar')
 
     // CLI and misc
     implementation group: 'io.airlift', name: 'airline', version: '0.9'
@@ -83,7 +84,7 @@ dependencies {
     implementation group: 'org.sharegov', name: 'mjson', version: '1.4.1'
     // underscore-java
     implementation group: 'com.github.javadev', name: 'underscore', version: '1.52'
-    //purejson 
+    //purejson
     implementation group: 'io.github.senthilganeshs', name: 'purejson', version: '1.0.1'
 
     // Test
